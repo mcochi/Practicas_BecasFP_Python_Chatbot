@@ -1,0 +1,34 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - subscribe
+
+slots:
+  nombre:
+    type: unfeaturized
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+  utter_ask_nombre:
+  - text: "What's your name?"
+  utter_subscribed:
+  - text: "Hello, {nombre}, do you know covid is?"
+  utter_goodbye:
+  - text: "bye"
+forms:
+  nombre_form:
+    nombre:
+    - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
