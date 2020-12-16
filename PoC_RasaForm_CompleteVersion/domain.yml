@@ -1,0 +1,64 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - subscribe
+
+slots:
+  name:
+    type: unfeaturized
+  tos:
+    type: unfeaturized
+  feel_tired:
+    type: unfeaturized
+  aches_pains:
+    type: unfeaturized
+  sore_throat:
+    type: unfeaturized
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+  utter_ask_name:
+  - text: "What's your name?"
+  utter_goodbye:
+  - text: "bye"
+  utter_ask_tos:
+  - text: "Hello, {name}, do you cough?"
+  utter_ask_feel_tired:
+  - text: "{name}, Do you feel tired?"
+  utter_ask_aches_pains:
+  - text: "{name}, Do you have aches and pains?"
+  utter_ask_sore_throat:
+  - text: "{name}, Do you have sore throat?"
+  utter_resume:
+  - text: "Resume: -tos=={tos}, feel_tired=={feel_tired}, aches_pains=={aches_pains}"
+
+actions:
+- validate_nombre_form
+- action_insert_mongo
+
+
+forms:
+  nombre_form:
+    name:
+    - type: from_text
+    tos:
+    - type: from_text
+    feel_tired:
+    - type: from_text
+    aches_pains:
+    - type: from_text
+    sore_throat:
+    - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

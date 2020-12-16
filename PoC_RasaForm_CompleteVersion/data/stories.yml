@@ -1,0 +1,20 @@
+version: "2.0"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: nombre_form
+  - active_loop: nombre_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_insert_mongo
+  - action: utter_resume
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_restart
+
+
+
