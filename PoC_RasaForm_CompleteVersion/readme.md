@@ -168,3 +168,20 @@ Para que funcione tambien el chatbot hay que hacer lo siguiente: En config.yml, 
      epochs: 100
    - name: RulePolicy
 ```
+
+# FUTURAS MEJORAS
+
+1. (MAPS)
+Podremos crear y personalizar una API nosotros mismos en la cual, con un servicio de google maps localicemos todos los
+centros de salud, y depende donde este el ususuario que esta hablando con el chatbot, lo llevariamos al centro de salud
+mas cercano a su ubicacion.
+
+2. (DEPENDE DE LOS SINTOMAS QUE TENGAS, QUE TE DIGA UNA COSA U OTRA)
+Tu le preguntaras los sintomas, los cuales si son true, llegaran a un motor de inteligencia artificial, y para acceder a 
+dicho motor, accederemos desde una api, una vez hecho esto, luego haremos un POST y te dira si te tienes que quedar en 
+casa, ir a hacerte una pcr...
+
+3. (PREGUNTAR LOS CASOS DE COVID EN LA ZONA QUE PREGUNTES)
+Por ejemplo, que el usuario pregunte cuantos casos hay en la rioja, o como va el corona virus en la rioja, y que el chatbot
+te de las cifras. Esto se hara practicamente igual que las anteriores mejoras, con una API, y luego hacerle un post y que te 
+de los datos de La Rioja o de donde te haya preguntado dicho usuario.
